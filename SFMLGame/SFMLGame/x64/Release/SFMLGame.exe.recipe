@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\C++Game\Game\SFMLGame\x64\Release\SFMLGame.exe</FullPath>
+      <FullPath>F:\C++Game\Games\SFMLGame\x64\Release\SFMLGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

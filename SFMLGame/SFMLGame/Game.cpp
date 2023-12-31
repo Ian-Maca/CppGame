@@ -25,7 +25,7 @@ void Game::initWindow()
 {
 	//Main window setup
 	this->videoMode.width = max_window_width;	this->videoMode.height = max_window_height;
-	this->window = new sf::RenderWindow(this->videoMode, "WHATTHEFUCK", sf::Style::Titlebar | sf::Style::Close);
+	this->window = new sf::RenderWindow(this->videoMode, "Ian's Game :D", sf::Style::Titlebar | sf::Style::Close);
 	this->window->setFramerateLimit(60);
 
 	//Background image setup
@@ -222,8 +222,10 @@ void Game::renderEnemies(sf::RenderTarget& target)
 
 void Game::renderText(sf::RenderTarget& target)
 {
+	//Draw main UI 
 	target.draw(this->uiText);
-
+	
+	//Draw end game UI
 	if (this->health == 0)
 	{
 		this->drawEndGame(target);
@@ -236,7 +238,7 @@ void Game::drawEndGame(sf::RenderTarget& target)
 	str << "High score: " << this->highScore;
 	this->endGameText.setPosition(sf::Vector2f((max_window_width / 4.f), (max_window_height / 2.f)));
 	this->endGameText.setString(str.str());
-	this->getFuckedText.setString("You smell like rotten dog cum");
+	this->getFuckedText.setString("You are bad at the game!");
 	this->getFuckedText.setPosition(sf::Vector2f((max_window_width / 4.f), (max_window_height / 3.f)));
 
 	target.draw(this->endGameBgSprite);
